@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+
+# ios dependencies
+ios/build/
+ios/Pods/
+ios/.symlinks/
+ios/*.xcworkspace/
+ios/*.xcuserdata/
+
+# Build files
+android/.gradle/
+android/app/build/
+android/build/
+android/.idea/
+android/local.properties
+android/.cxx/
+
+# Keystore files (security risk)
+android/app/*.keystore
+
+# Gradle wrapper logs
+android/gradle/wrapper/gradle-wrapper.jar
+
+# Dependency caches
+android/.gradle/
+android/gradle/
+
+# Virtual device (AVD) and IntelliJ/Android Studio settings
+*.iml
+*.hprof
+android/captures/
