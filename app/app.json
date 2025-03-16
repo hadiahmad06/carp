@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "carp2a",
-    "slug": "carp2a",
+    "name": "Carp App",
+    "slug": "carp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

@@ -1,0 +1,8 @@
+{
+    "name": "react-figma-boilerplate",
+    "id": "745995778738837862",
+    "api": "1.0.0",
+    "main": "app/code.js",
+    "ui": "app/ui.html",
+    "editorType": ["figma"]
+  }
