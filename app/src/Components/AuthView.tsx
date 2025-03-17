@@ -1,9 +1,12 @@
-import React, { useMemo } from "react";
-import { Text, useColorScheme, StyleSheet, View, Image, TouchableOpacity, TextInput } from "react-native";
+import React, { useMemo, useState, useEffect } from "react";
+import { Text, useColorScheme, StyleSheet, View, Image, TouchableOpacity, TextInput, Animated } from "react-native";
+import { Dimensions } from 'react-native';
 
-const SignIn = () => {
+import SlideViews from "../Models/SlideViews";
+
+const AuthView = () => {
   const colorScheme = useColorScheme(); // Get the current color scheme (light or dark)
-
+  
   const icon = require("../../../assets/icon.png");
   const appleLogo = require("../../../assets/images/apple_logo.png");
   const googleLogo = require("../../../assets/images/google_logo.webp");
@@ -11,19 +14,30 @@ const SignIn = () => {
   // Define light and dark styles conditionally
   const styles = useMemo(() => createStyles(colorScheme), [colorScheme]);
 
+  // Animate the sliding effect when switching between Sign In and Sign Up
+  const [showView1, setShowView1] = useState(true);
+
   return (
     <View style={styles.container}>
       <Image style={styles.appIcon} source={icon} />
-      <Text style={styles.appName}>Welcome to Carp!</Text>
-      
       <View style={styles.content}>
-        <Text style={styles.title}>Create an account</Text>
-        <Text style={styles.subtitle}>Enter your email to sign up for this app</Text>
-        
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <SlideViews 
+          view1={<View style={styles.titleContainer}><Text style={styles.title}>Log In</Text></View>}
+          view2={<View style={styles.titleContainer}><Text style={styles.title}>Create an Account</Text></View>}
+          animationTime={0.5}
+          direction="horizontal"
+          showView1={showView1}
+          setShowView1={setShowView1}
+          />
+        </View>
+
+        <Text style={styles.subtitle}>{"Enter your email to continue"}</Text>
+
         <View style={styles.inputContainer}>
           <TextInput style={styles.input} placeholder="email@domain.com" placeholderTextColor="#828282" />
           <TouchableOpacity style={styles.primaryButton}>
-            <Text style={styles.primaryButtonText}>Continue</Text>
+            <Text style={styles.primaryButtonText}>{"Continue"}</Text>
           </TouchableOpacity>
         </View>
 
@@ -45,8 +59,12 @@ const SignIn = () => {
         </View>
 
         <Text style={styles.termsText}>
-          By clicking continue, you agree to our <Text style={styles.linkText}>Terms of Service</Text> and <Text style={styles.linkText}>Privacy Policy</Text>
+          By clicking Continue, you agree to our <Text style={styles.linkText}>Terms of Service</Text> and <Text style={styles.linkText}>Privacy Policy</Text>
         </Text>
+
+        <TouchableOpacity style={styles.toggleButton} onPress={() => setShowView1((prev) => !prev)}>
+          <Text style={styles.toggleButtonText}>{showView1 ? "Need an account? Sign Up" : "Already have an account? Log In"}</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -69,19 +87,29 @@ const createStyles = (colorScheme) => StyleSheet.create({
   },
   appName: {
     fontSize: 24,
+    width: "100%",
     fontWeight: "600",
-    textAlign: "center",
-    marginBottom: 20,
+    // textAlign: "center",
+    marginBottom: 15,
     color: colorScheme === "dark" ? "#fff" : "#000", // Text color based on the mode
   },
   content: {
     width: "100%",
     alignItems: "center",
   },
+  titleContainer: {
+    width: "100%",
+    marginBottom: 15,
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    // position: "absolute"
+  },
   title: {
     fontSize: 18,
+    width: "100%",
     fontWeight: "600",
-    marginBottom: 5,
+    // textAlign: "center",
     color: colorScheme === "dark" ? "#fff" : "#000", // Text color based on the mode
   },
   subtitle: {
@@ -159,6 +187,13 @@ const createStyles = (colorScheme) => StyleSheet.create({
     color: "#007BFF", // Blue for links to make them stand out
     fontWeight: "500",
   },
+  toggleButton: {
+    marginTop: 20,
+  },
+  toggleButtonText: {
+    color: "#007BFF",
+    fontWeight: "600",
+  },
 });
 
-export default SignIn;
+export default AuthView;
