@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "carp2a.app"
-               BlueprintName = "carp2a"
-               ReferencedContainer = "container:carp2a.xcodeproj">
+               BuildableName = "carp.app"
+               BlueprintName = "carp"
+               ReferencedContainer = "container:carp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "carp2aTests.xctest"
-               BlueprintName = "carp2aTests"
-               ReferencedContainer = "container:carp2a.xcodeproj">
+               BuildableName = "carpTests.xctest"
+               BlueprintName = "carpTests"
+               ReferencedContainer = "container:carp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "carp2a.app"
-            BlueprintName = "carp2a"
-            ReferencedContainer = "container:carp2a.xcodeproj">
+            BuildableName = "carp.app"
+            BlueprintName = "carp"
+            ReferencedContainer = "container:carp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "carp2a.app"
-            BlueprintName = "carp2a"
-            ReferencedContainer = "container:carp2a.xcodeproj">
+            BuildableName = "carp.app"
+            BlueprintName = "carp"
+            ReferencedContainer = "container:carp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

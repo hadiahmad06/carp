@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "456841126690",
+    "project_id": "carp-mobile-app",
+    "storage_bucket": "carp-mobile-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456841126690:android:59a763a3ef7be6d10efb7b",
+        "android_client_info": {
+          "package_name": "com.carp.carp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgOZECwvg4Zmb3aJk7L9W_SRhOvLGeY-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

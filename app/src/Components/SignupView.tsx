@@ -1,16 +1,20 @@
-import * as React from "react";
-import { Text } from 'react-native';
-import { StyleSheet, View, Image, TouchableOpacity, TextInput } from "react-native";
+import React, { useMemo } from "react";
+import { Text, useColorScheme, StyleSheet, View, Image, TouchableOpacity, TextInput } from "react-native";
 
 const SignIn = () => {
+  const colorScheme = useColorScheme(); // Get the current color scheme (light or dark)
+
   const icon = require("../../../assets/icon.png");
   const appleLogo = require("../../../assets/images/apple_logo.png");
-  const googleLogo = require("../../../assets/images/google_logo.svg"); // Changed to PNG for compatibility
+  const googleLogo = require("../../../assets/images/google_logo.webp");
+
+  // Define light and dark styles conditionally
+  const styles = useMemo(() => createStyles(colorScheme), [colorScheme]);
 
   return (
     <View style={styles.container}>
       <Image style={styles.appIcon} source={icon} />
-      <Text style={styles.appName}>Carp</Text>
+      <Text style={styles.appName}>Welcome to Carp!</Text>
       
       <View style={styles.content}>
         <Text style={styles.title}>Create an account</Text>
@@ -40,25 +44,27 @@ const SignIn = () => {
           </TouchableOpacity>
         </View>
 
-		<Text style={styles.termsText}>
-			By clicking continue, you agree to our <Text style={styles.linkText}>Terms of Service</Text> and <Text style={styles.linkText}>Privacy Policy</Text>
-		</Text>
+        <Text style={styles.termsText}>
+          By clicking continue, you agree to our <Text style={styles.linkText}>Terms of Service</Text> and <Text style={styles.linkText}>Privacy Policy</Text>
+        </Text>
       </View>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+// Define styles based on the color scheme
+const createStyles = (colorScheme) => StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: colorScheme === "dark" ? "#121212" : "#fff", // Dark mode background adjusted to a darker shade
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
   },
   appIcon: {
-    width: 50,
-    height: 50,
+    width: '100%',
+    height: 120,
+    resizeMode: 'contain',
     marginBottom: 10,
   },
   appName: {
@@ -66,6 +72,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     textAlign: "center",
     marginBottom: 20,
+    color: colorScheme === "dark" ? "#fff" : "#000", // Text color based on the mode
   },
   content: {
     width: "100%",
@@ -75,10 +82,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "600",
     marginBottom: 5,
+    color: colorScheme === "dark" ? "#fff" : "#000", // Text color based on the mode
   },
   subtitle: {
     fontSize: 14,
-    color: "#828282",
+    color: colorScheme === "dark" ? "#ccc" : "#828282", // Text color based on the mode for better contrast
     marginBottom: 20,
     textAlign: "center",
   },
@@ -89,20 +97,20 @@ const styles = StyleSheet.create({
   input: {
     height: 45,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: colorScheme === "dark" ? "#444" : "#e0e0e0", // Border color
     borderRadius: 8,
     paddingHorizontal: 15,
-    backgroundColor: "#f9f9f9",
+    backgroundColor: colorScheme === "dark" ? "#333" : "#f9f9f9", // Input background color
   },
   primaryButton: {
     height: 45,
-    backgroundColor: "#000",
+    backgroundColor: colorScheme === "dark" ? "#ffffff" : "#000", // Button background color
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 8,
   },
   primaryButtonText: {
-    color: "#fff",
+    color: "#000", // Button text color for contrast in both modes
     fontWeight: "600",
   },
   dividerContainer: {
@@ -114,11 +122,11 @@ const styles = StyleSheet.create({
   divider: {
     flex: 1,
     height: 1,
-    backgroundColor: "#e0e0e0",
+    backgroundColor: colorScheme === "dark" ? "#555" : "#e0e0e0", // Divider color based on the mode
   },
   orText: {
     marginHorizontal: 10,
-    color: "#828282",
+    color: colorScheme === "dark" ? "#ccc" : "#828282", // Text color based on the mode
   },
   oauthButtons: {
     width: "100%",
@@ -129,7 +137,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     height: 45,
-    backgroundColor: "#f0f0f0",
+    backgroundColor: colorScheme === "dark" ? "#444" : "#f0f0f0", // Button background color based on mode
     borderRadius: 8,
   },
   logo: {
@@ -139,15 +147,16 @@ const styles = StyleSheet.create({
   },
   oauthText: {
     fontWeight: "500",
+    color: colorScheme === "dark" ? "#fff" : "#000", // Text color based on mode
   },
   termsText: {
     fontSize: 12,
-    color: "#828282",
+    color: colorScheme === "dark" ? "#ccc" : "#828282", // Text color based on mode
     textAlign: "center",
     marginTop: 15,
   },
   linkText: {
-    color: "#000",
+    color: "#007BFF", // Blue for links to make them stand out
     fontWeight: "500",
   },
 });

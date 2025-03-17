@@ -1,7 +1,7 @@
 // App.tsx
 import * as React from 'react';
 // import { Page, Rectangle, Text } from 'react-native';
-import ContentView from "./src/Components/LoginView"
+import ContentView from "./src/Components/SignupView"
 
 // Main App component
 const App = () => {

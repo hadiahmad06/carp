@@ -1,7 +1,7 @@
 
-import * as React from 'react';
+// import * as React from 'react';
 import App from './App';
-import { render } from 'react-figma';
+// import { render } from 'react-figma';
 
 import { registerRootComponent } from 'expo';
 
@@ -11,4 +11,4 @@ import { registerRootComponent } from 'expo';
 registerRootComponent(App);
 
 // Render your React application to the Figma plugin UI
-render(<App />);
+// render(<App />);
