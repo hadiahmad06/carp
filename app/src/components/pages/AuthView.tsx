@@ -2,14 +2,14 @@ import React, { useMemo, useState, useEffect } from "react";
 import { Text, useColorScheme, StyleSheet, View, Image, TouchableOpacity, TextInput, Animated } from "react-native";
 import { Dimensions } from 'react-native';
 
-import SlideViews from "../Models/SlideViews";
+import SlideViews from "../templates/SlideViews";
 
 const AuthView = () => {
   const colorScheme = useColorScheme(); // Get the current color scheme (light or dark)
   
-  const icon = require("../../../assets/icon.png");
-  const appleLogo = require("../../../assets/images/apple_logo.png");
-  const googleLogo = require("../../../assets/images/google_logo.webp");
+  const icon = require("../../../../assets/icon.png");
+  const appleLogo = require("../../../../assets/images/apple_logo.png");
+  const googleLogo = require("../../../../assets/images/google_logo.webp");
 
   // Define light and dark styles conditionally
   const styles = useMemo(() => createStyles(colorScheme), [colorScheme]);
