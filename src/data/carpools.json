@@ -1,0 +1,119 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alex Thompson",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+      "rating": 4.8,
+      "bio": "Music lover | Concert enthusiast",
+      "trips": [
+        {
+          "id": "t1",
+          "event": "Taylor Swift | The Eras Tour",
+          "venue": "U.S. Bank Stadium, Minneapolis",
+          "origin": "St. Cloud, MN",
+          "destination": "Minneapolis, MN",
+          "date": "2024-06-15",
+          "departureTime": "16:00",
+          "returnTime": "23:30",
+          "spacesAvailable": 3,
+          "price": 15,
+          "participants": [],
+          "chatId": "chat1"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Emily Rodriguez",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+      "rating": 4.9,
+      "bio": "Rock music fan | Safe driver",
+      "trips": [
+        {
+          "id": "t2",
+          "event": "Metallica",
+          "venue": "Xcel Energy Center, St. Paul",
+          "origin": "Rochester, MN",
+          "destination": "St. Paul, MN",
+          "date": "2024-06-20",
+          "departureTime": "17:00",
+          "returnTime": "23:00",
+          "spacesAvailable": 2,
+          "price": 20,
+          "participants": [],
+          "chatId": "chat2"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Marcus Chen",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+      "rating": 4.7,
+      "bio": "Concert photographer | Music enthusiast",
+      "trips": [
+        {
+          "id": "t3",
+          "event": "The Weeknd",
+          "venue": "Target Center, Minneapolis",
+          "origin": "Duluth, MN",
+          "destination": "Minneapolis, MN",
+          "date": "2024-07-10",
+          "departureTime": "15:00",
+          "returnTime": "23:00",
+          "spacesAvailable": 4,
+          "price": 25,
+          "participants": [],
+          "chatId": "chat3"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Sarah Williams",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
+      "rating": 4.9,
+      "bio": "Pop music lover | Friendly driver",
+      "trips": [
+        {
+          "id": "t4",
+          "event": "Ed Sheeran",
+          "venue": "U.S. Bank Stadium, Minneapolis",
+          "origin": "Mankato, MN",
+          "destination": "Minneapolis, MN",
+          "date": "2024-07-15",
+          "departureTime": "16:30",
+          "returnTime": "23:00",
+          "spacesAvailable": 3,
+          "price": 18,
+          "participants": [],
+          "chatId": "chat4"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "David Kim",
+      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400",
+      "rating": 4.8,
+      "bio": "Classical music enthusiast | Experienced driver",
+      "trips": [
+        {
+          "id": "t5",
+          "event": "Minnesota Orchestra",
+          "venue": "Orchestra Hall, Minneapolis",
+          "origin": "St. Cloud, MN",
+          "destination": "Minneapolis, MN",
+          "date": "2024-06-25",
+          "departureTime": "18:00",
+          "returnTime": "22:30",
+          "spacesAvailable": 2,
+          "price": 15,
+          "participants": [],
+          "chatId": "chat5"
+        }
+      ]
+    }
+  ]
+}
